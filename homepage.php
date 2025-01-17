@@ -87,7 +87,7 @@ include("connect.php");
             </div>
 
             <div class="mt-4">
-                <a href="online_consultation.php" class="bg-secondary text-white py-2 px-4 rounded inline-block transform hover:scale-105 transition focus:outline-none">Online Doctor Consultation</a>
+                <a href="health_diet.php" class="bg-secondary text-white py-2 px-4 rounded inline-block transform hover:scale-105 transition focus:outline-none">Diet of Health</a>
                 <a href="offline_appointment.php" class="bg-primary text-white py-2 px-4 rounded inline-block ml-2 transform hover:scale-105 transition focus:outline-none">Book Offline Appointment</a>
             </div>
         </section>
@@ -134,7 +134,7 @@ include("connect.php");
                 dietText = 'Work with a dietitian to create a sustainable weight-loss plan.';
             }
 
-            document.getElementById('bmiCategory').innerText = `Health Condition: ${category}`;
+            document.getElementById('bmiCategory').innerText = `Health Condition: ${category} `;
             document.getElementById('exerciseText').innerText = exerciseText;
             document.getElementById('dietText').innerText = dietText;
 
