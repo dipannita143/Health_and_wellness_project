@@ -76,7 +76,7 @@
                 </div>
                 <!-- Plan Card -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center scale-hover">
-                    <h3 class="text-xl font-bold mb-4">Normal BMI</h3>
+                    <h3 class="text-xl font-bold mb-4">Normal Weight</h3>
                     <p class="text-gray-700 mb-4">A balanced diet to maintain your healthy BMI.</p>
                     <ul class="text-gray-700 mb-4 text-left">
                         <li>• Breakfast: Avocado toast with eggs</li>
@@ -96,7 +96,7 @@
                         <li>• Snack: Apple slices with almond butter</li>
                         <li>• Dinner: Grilled chicken and steamed broccoli</li>
                     </ul>
-                    <a href="#" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transform hover:scale-105 transition-transform duration-300">See weakly plan</a>
+                    <a href="overweight.php" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transform hover:scale-105 transition-transform duration-300">See weakly plan</a>
                 </div>
                 <!-- Plan Card -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center scale-hover">
@@ -108,7 +108,7 @@
                         <li>• Snack: Celery sticks with hummus</li>
                         <li>• Dinner: Baked chicken with cauliflower rice</li>
                     </ul>
-                    <a href="#" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transform hover:scale-105 transition-transform duration-300">Learn More</a>
+                    <a href="obese.php" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transform hover:scale-105 transition-transform duration-300">See Weakly Plan</a>
                 </div>
             </div>
         </div>
@@ -123,26 +123,28 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 fade-in">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
-            <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
-                <div class="mb-4">
-                    <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-                    <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="Your Name">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="Your Email">
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-                    <textarea id="message" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="Your Message" rows="4"></textarea>
-                </div>
-                <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded shadow hover:bg-green-600 transform hover:scale-110 transition-transform duration-300">Send Message</button>
-            </form>
-        </div>
-    </section>
+    <!-- Contact Section -->
+<section id="contact" class="py-16 fade-in">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
+        <!-- Form action changed to point to contact.php -->
+        <form method="POST" action="contact.php" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="Your Name">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="Your Email">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                <textarea id="message" name="message" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="Your Message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="bg-indigo-500 text-white px-6 py-2 rounded shadow hover:bg-indigo-600 transform hover:scale-110 transition-transform duration-300">Send Message</button>
+        </form>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-green-500 text-white py-4">
