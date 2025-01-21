@@ -88,7 +88,7 @@ include("connect.php");
 
             <div class="mt-4">
                 <a href="health_diet.php" class="bg-secondary text-white py-2 px-4 rounded inline-block transform hover:scale-105 transition focus:outline-none">Diet of Health</a>
-                <a href="offline_appointment.php" class="bg-primary text-white py-2 px-4 rounded inline-block ml-2 transform hover:scale-105 transition focus:outline-none">Book Offline Appointment</a>
+                <a href="book_appointment.php" class="bg-primary text-white py-2 px-4 rounded inline-block ml-2 transform hover:scale-105 transition focus:outline-none">Book online Appointment</a>
             </div>
         </section>
     </main>
