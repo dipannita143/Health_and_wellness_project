@@ -52,10 +52,45 @@ $doctors = mysqli_fetch_all($result, MYSQLI_ASSOC);
             </div>
 
             <!-- Appointment Time -->
-            <div class="mb-4">
-                <label for="appointment_time" class="block text-gray-700 font-bold mb-2">Select Time</label>
-                <input type="time" id="appointment_time" name="appointment_time" class="w-full px-4 py-2 border rounded-lg focus:ring-blue-500" required>
-            </div>
+<div class="mb-4">
+    <label for="appointment_time" class="block text-gray-700 font-bold mb-2">Select Time</label>
+    <select id="appointment_time" name="appointment_time" class="w-full px-4 py-2 border rounded-lg focus:ring-blue-500" required>
+        <option value="">-- Select Time --</option>
+    </select>
+</div>
+
+<script>
+    // Define doctors' availability
+    const doctorAvailability = {
+        1: [
+            "09:00", "09:30", "10:00", "10:30", "11:00",
+            "14:00", "14:30", "15:00", "15:30", "16:00"
+        ],
+        2: [
+            "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00"
+        ]
+    };
+
+    // Elements
+    const doctorSelect = document.getElementById("doctor_id");
+    const timeSelect = document.getElementById("appointment_time");
+
+    // Event listener for doctor selection
+    doctorSelect.addEventListener("change", function () {
+        const doctorId = doctorSelect.value; // Get selected doctor ID
+        timeSelect.innerHTML = '<option value="">-- Select Time --</option>'; // Clear previous options
+
+        if (doctorAvailability[doctorId]) {
+            // Populate time options based on selected doctor
+            doctorAvailability[doctorId].forEach(time => {
+                const option = document.createElement("option");
+                option.value = time;
+                option.textContent = time;
+                timeSelect.appendChild(option);
+            });
+        }
+    });
+</script>
 
             <!-- Submit Button -->
             <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Appointment</button>
